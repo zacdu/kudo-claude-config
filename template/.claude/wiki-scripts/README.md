@@ -29,6 +29,13 @@ Wiki lifecycle automation for {{PROJECT_NAME}}. All scripts = thin `claude -p` w
 YAML frontmatter + markdown body:
 - `title`, `tier` (essential/important/optional), `category`, `confidence` (0-1), `last_updated`, `sources`
 
+## Coordination with Claude Code Memory
+
+- **Memory** (`.claude/memory/`) = lightweight preferences, session corrections (built-in, fixed path)
+- **Wiki** (`.claude/wiki/`) = compiled persistent knowledge (architecture, decisions, gotchas, patterns)
+- Memory stays lightweight. Compilable knowledge → promote to a wiki page.
+- `MEMORY.md` cross-references the wiki index where relevant.
+
 ## CLAUDE.md Generation
 
 Template: `claude-md-template.md` — static skeleton with `<!-- WIKI:X -->` markers.
