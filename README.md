@@ -34,9 +34,13 @@ For manual install or flag reference: `./init.sh --help` after cloning the repo.
 
 ## What you get
 
-A `CLAUDE.md` at the project root (loaded automatically every session) plus a `.claude/` folder with four workflow skills — `small-feature`, `large-feature`, `debug`, `review` — that route automatically based on what you ask for. "Fix this typo" gets the quick path; "design a plugin system" gets the full research → plan → implement pipeline.
+**A CLAUDE.md** at the project root (loaded automatically every session) plus a `.claude/` folder with four workflow skills — `small-feature`, `large-feature`, `debug`, `review` — that route automatically based on what you ask for. "Fix this typo" gets the quick path; "design a plugin system" gets the full research → plan → implement pipeline.
 
-There's also a knowledge wiki that grows with your project, so Claude starts each session already knowing the architecture and past decisions instead of re-deriving them every time.
+**Fresh-context phases for big work.** When Claude hits a large task, it doesn't try to hold the whole job in one session. It splits into phases — research, plan, implement — and runs each in its own brand-new Claude session. Each phase reads a file the previous phase wrote, does its job, and writes a file for the next one. You get to read and approve those files between phases. The payoff: long sessions drift and forget; fresh sessions stay sharp, and you stay in control of what gets handed forward.
+
+**Caveman mode** (via a [Session Start hook](.claude/hooks/caveman-ultra.sh)) flips Claude into a heavily compressed communication style — fragments, abbreviations, arrows for cause-and-effect. It's not cute; it's a 50–75% token cut on every response. Faster, cheaper, same accuracy. (Requires the [caveman plugin](https://github.com/Jacck/caveman); remove the hook if you don't want it.)
+
+**A knowledge wiki** that grows with your project, so Claude starts each session already knowing the architecture and past decisions instead of re-deriving them every time.
 
 ---
 
