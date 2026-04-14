@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Read({{PROJECT_ROOT}}/**)",
+      "WebFetch(domain:github.com)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh .claude/hooks/caveman-ultra.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh .claude/hooks/build-check.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+/**
+ * {{Module}} types — shapes for {{description}}.
+ * Keep under ~80 lines — split when it grows.
+ */
+
+export interface {{PrimaryInterface}} {
+  readonly id: string;
+  // fields
+}
+
+export type {{DiscriminatedUnion}} =
+  | { readonly type: "variant_a"; /* fields */ }
+  | { readonly type: "variant_b"; /* fields */ };

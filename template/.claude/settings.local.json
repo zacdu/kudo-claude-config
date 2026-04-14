@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash({{BUILD_CHECK_CMD}})",
+      "Bash(git diff:*)",
+      "Read(//private/tmp/**)"
+    ]
+  }
+}

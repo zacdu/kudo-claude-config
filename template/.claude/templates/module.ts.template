@@ -1,0 +1,19 @@
+/**
+ * {{MODULE_NAME}} — {{one-line description}}.
+ */
+
+import type { {{ImportedType}} } from "../types.js";
+
+// ── Types ──
+
+interface {{PrimaryType}} {
+  readonly field: string;
+}
+
+// ── Public API ──
+
+export function {{primaryFunction}}(/* params */): {{ReturnType}} {
+  // implementation
+}
+
+// ── Helpers (co-locate if <20 lines, otherwise separate file) ──
