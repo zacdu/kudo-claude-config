@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # ingest-artifact.sh — Extract wiki knowledge from a completed artifact.
 # Usage: ./.claude/wiki-scripts/ingest-artifact.sh <artifact_path>
+# Example: ./.claude/wiki-scripts/ingest-artifact.sh {{ARTIFACT_DIR}}/QUEST_SYSTEM_RESEARCH.md
 
 set -euo pipefail
 cd "$(git rev-parse --show-toplevel)"

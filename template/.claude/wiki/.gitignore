@@ -1,0 +1,12 @@
+.ingest-queue
+.ingest-queue.tmp
+.ingest-queue.snapshot
+.ingest-queue.lock
+.ingest-queue.failed
+.ingest-prompted
+.regen.dirty
+.regen.lock
+.generate.log
+.lint.lock
+.lint.log
+.DS_Store

@@ -40,7 +40,7 @@ For manual install or flag reference: `./init.sh --help` after cloning the repo.
 
 **Caveman mode** (via a [Session Start hook](.claude/hooks/caveman-ultra.sh)) flips Claude into a heavily compressed communication style — fragments, abbreviations, arrows for cause-and-effect. It's not cute; it's a 50–75% token cut on every response. Faster, cheaper, same accuracy. (Requires the [caveman plugin](https://github.com/Jacck/caveman); remove the hook if you don't want it.)
 
-**A knowledge wiki** that grows with your project, so Claude starts each session already knowing the architecture and past decisions instead of re-deriving them every time.
+**A knowledge wiki** that grows with your project, so Claude starts each session already knowing the architecture and past decisions instead of re-deriving them every time. Research/plan artifacts auto-queue for ingestion; at session end Claude prompts you once to decide which to fold into the wiki — then CLAUDE.md regenerates on the next wiki edit.
 
 ---
 

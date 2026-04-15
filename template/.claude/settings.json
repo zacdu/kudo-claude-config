@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Read({{PROJECT_ROOT}}/**)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Write({{PROJECT_ROOT}}/.claude/wiki/**)",
+      "Edit({{PROJECT_ROOT}}/.claude/wiki/**)"
     ]
   },
   "hooks": {
@@ -25,6 +27,27 @@
             "type": "command",
             "command": "sh .claude/hooks/build-check.sh",
             "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "sh .claude/hooks/wiki-generate.sh",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "sh .claude/hooks/wiki-enqueue.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh .claude/hooks/wiki-stop-gate.sh",
+            "timeout": 10
           }
         ]
       }
